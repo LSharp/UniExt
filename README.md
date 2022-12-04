@@ -2,7 +2,8 @@
 Unity Extensions
 
 ```cs
-public void SetTransform()
+// Chainable Example
+public void SetupTransform()
 {
     transform
         ._SetPosXY(x,y)         // transform.positon = new Vector3(x,y,transform.positon.z);
