@@ -1,0 +1,10 @@
+{
+  "name": "unity.lsharp.uniext",
+  "displayName": "UniExt",
+  "version": "1.0.1",
+  "documentationUrl": "https://github.com/LSharp/UniExt",
+  "changelogUrl": "https://github.com/LSharp/UniExt/releases",
+  "licensesUrl": "https://github.com/LSharp/UniExt/blob/master/LICENSE",
+  "description": "Unity Extensions",
+  "hideInEditor": false
+}

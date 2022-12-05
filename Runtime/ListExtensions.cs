@@ -260,7 +260,7 @@ namespace UniExt
 
         public static string _Join<T>(this IEnumerable<T> list, string separator)
         {
-            return string.Join(separator, list.Select(x => x.ToString()).ToArray());
+            return string.Join(separator, list.Select(x => x?.ToString()).ToArray());
         }
 
         #endregion
@@ -297,6 +297,7 @@ namespace UniExt
         public static T _LastOrDefault<T>(this IEnumerable<T> source)
         {
             return source is IList<T> list && list.Count > 0 ? list[list.Count - 1] : default(T);
+            //  return source is IList<T> { Count: > 0 } list ? list[^1] : default(T);
         }
 
         #endregion
@@ -316,7 +317,7 @@ namespace UniExt
 
         #region DISTINCT
 
-        public static IEnumerable<T> _Distinct<T>(this IEnumerable<T> source)
+        public static IEnumerable<T> _Distinct<T>(this IEnumerable<T> source) where T : notnull
         {
             var set = new Dictionary<T, object>();
 
@@ -345,7 +346,7 @@ namespace UniExt
 
         #region UNION
 
-        public static IEnumerable<T> _Union<T>(this IEnumerable<T> first, IEnumerable<T> second)
+        public static IEnumerable<T> _Union<T>(this IEnumerable<T> first, IEnumerable<T> second) where T : notnull
         {
             return first._Concat(second)._Distinct();
         }
