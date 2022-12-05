@@ -6,5 +6,12 @@
   "changelogUrl": "https://github.com/LSharp/UniExt/releases",
   "licensesUrl": "https://github.com/LSharp/UniExt/blob/master/LICENSE",
   "description": "Unity Extensions",
-  "hideInEditor": false
+  "hideInEditor": false,
+  "license": "MIT",
+  "author": 
+  {
+    "name": "LSharp",
+    "email": "lsharp3d@me.com",
+    "url": "https://github.com/LSharp"
+  }
 }
